@@ -19,8 +19,8 @@ void main(){
   print('Result No. 04');
   List numbers = [52,34,36,22,20,14,16,88,32,68,76,92,46];
   numbers.sort();
-  print('Smalles of Lists Numbers : ${numbers[0]}');
-  print('Greates of List Numbers : ${numbers[numbers.length - 1]}');
+  print('Smallest of Lists Numbers : ${numbers[0]}');
+  print('Greatest of Lists Numbers : ${numbers[numbers.length - 1]}');
 
 //  Q.5: Given a list of integers, write a dart code that returns the maximum value from the list.
   print('Result No. 05');
@@ -73,50 +73,53 @@ void main(){
 
 // SELF TASK:
 // Use  any 10 List methods.
+  print('Self Task');
 
   print('Self Task Method No. 01');
   var growableList = <String>['A', 'B'];
   growableList.shuffle();
   print(growableList);
 
-  var indexA = growableList.indexOf('A');
-
-  growableList.insert(1, 'New');
-  print(growableList);
-
-
+  print('Self Task Method No. 02');
   bool isVowel(String char) => char.length == 1 && "AEIOU".contains(char);
   final firstVowel = growableList.firstWhere(isVowel, orElse: () => '');
+  print(firstVowel);
 
+  print('Self Task Method No. 03');
   var myList= [1,2,3,4,5];
   print(myList.sublist(1,3));
 
+  print('Self Task Method No. 04');
   List<String> sports = ['cricket', 'football', 'tennis', 'baseball'];
   Map<int, String> map = sports.asMap();
   print(map);
 
+  print('Self Task Method No. 05');
   var mixList = [1, "a", 2, "b", 3, "c", 4, "d"];
   var num = mixList.whereType<int>();
   print(num);
 
-
+  print('Self Task Method No. 06');
   var sList = ['one', 'two', 'three', 'four'];
   print(sList.firstWhere((i) => i.length > 3));
 
-
+  print('Self Task Method No. 07');
   var lst = [1,2,3,4,5];
   var res = lst.fold(5, (i, j) => i + j);
   print('res is ${res}');
 
+  print('Self Task Method No. 08');
   var lst1 = [1,2,3,4,5];
   var res1 = lst1.reduce((i, j) => i + j);
   print('res is ${res1}');
 
-
+  print('Self Task Method No. 09');
   var sportsList = ['cricket', 'tennis', 'football'];
   print(sportsList.followedBy(['golf', 'chess']).toList());
 
+  print('Self Task Method No. 10');
   print(sportsList.any((e) => e.contains('cricket')));
 
+  print('Self Task Method No. 11s');
   print(sportsList.every((e) => e.startsWith('a')));
 }
